@@ -20,8 +20,10 @@
     "preview": "vite preview",
     "release": "release-it"
   },
-  "hooks": {
-    "after:version": "npm run build"
+  "release-it": {
+    "hooks": {
+      "after:bump": "npm run build"
+    }
   },
   "devDependencies": {
     "release-it": "^15.10.3",
