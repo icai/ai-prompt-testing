@@ -8,7 +8,7 @@ function createBtn(opt) {
     return;
   }
   __chatinit = true;
-  var chatgpturl = "https://chat.openai.com/?prompt={prompt}&form={form}";
+  var chatgpturl = "https://chat.openai.com/?prompt={prompt}&from={from}";
   var browserLang = navigator.language.substr(0, 2);
   var switchlang = "";
   function i18n(key) {
@@ -30,7 +30,7 @@ function createBtn(opt) {
     switchlang = nextlang();
     document.getElementById("gen-btn").title = i18n("title");
   }
-  // if formOrgin
+  // if fromOrgin
   if (window.atob && window.atob(opt.config) !== location.origin) {
     return;
   }
@@ -82,7 +82,7 @@ function createBtn(opt) {
         const a = document.createElement("a");
         a.style.display = "none";
         a.href = chatgpturl
-          .replace("{form}", encodeURIComponent(url))
+          .replace("{from}", encodeURIComponent(url))
           .replace("{prompt}", encodeURIComponent(text));
         a.target = "_blank";
         a.click();
