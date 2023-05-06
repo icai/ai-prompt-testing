@@ -46,51 +46,56 @@ function createBtn(opt) {
   // 将按钮和提示内容添加到页面中
   document.body.appendChild(btn);
   // 为按钮绑定点击事件
+  let clickTimer;
   btn.addEventListener("click", () => {
-    // 获取当前网页地址
-    const url = window.location.href;
-    // 生成文本内容
-    const text = i18n("prompt").replace("{url}", url);
-    // 将文本内容复制到剪贴板
-    navigator.clipboard.writeText(text);
-    // 创建提示内容元素
-    const tooltip = document.createElement("div");
-    tooltip.id = "tooltip";
-    tooltip.style.display = "none";
-    tooltip.style.position = "fixed";
-    tooltip.style.zIndex = "9999";
-    tooltip.style.bottom = "50%";
-    tooltip.style.right = "100px";
-    tooltip.style.backgroundColor = "#74aa9c";
-    tooltip.style.color = "white";
-    tooltip.style.padding = "10px";
-    tooltip.style.borderRadius = "5px";
-    tooltip.style.opacity = "0";
-    tooltip.style.transition = "opacity 0.3s";
-
-    tooltip.innerText = i18n("copy");
-    document.body.appendChild(tooltip);
-    // 显示提示内容并淡入
-    tooltip.style.display = "block";
-    tooltip.style.opacity = "1";
-    // 2 秒后淡出并移除提示内容
-    tooltip.onclick = () => {
+    clearTimeout(clickTimer)
+    clickTimer = setTimeout(function () {
+      // 获取当前网页地址
+      const url = window.location.href;
+      // 生成文本内容
+      const text = i18n("prompt").replace("{url}", url);
+      // 将文本内容复制到剪贴板
+      navigator.clipboard.writeText(text);
+      // 创建提示内容元素
+      const tooltip = document.createElement("div");
+      tooltip.id = "tooltip";
+      tooltip.style.display = "none";
+      tooltip.style.position = "fixed";
+      tooltip.style.zIndex = "9999";
+      tooltip.style.bottom = "50%";
+      tooltip.style.right = "100px";
+      tooltip.style.backgroundColor = "#74aa9c";
+      tooltip.style.color = "white";
+      tooltip.style.padding = "10px";
+      tooltip.style.borderRadius = "5px";
       tooltip.style.opacity = "0";
-      // use a tag to create a new tab to open the url
-      setTimeout(() => {
-        tooltip.remove();
-        const a = document.createElement("a");
-        a.style.display = "none";
-        a.href = chatgpturl
-          .replace("{from}", encodeURIComponent(url))
-          .replace("{prompt}", encodeURIComponent(text));
-        a.target = "_blank";
-        a.click();
-      }, 300);
-    };
+      tooltip.style.transition = "opacity 0.3s";
+
+      tooltip.innerText = i18n("copy");
+      document.body.appendChild(tooltip);
+      // 显示提示内容并淡入
+      tooltip.style.display = "block";
+      tooltip.style.opacity = "1";
+      // 2 秒后淡出并移除提示内容
+      tooltip.onclick = () => {
+        tooltip.style.opacity = "0";
+        // use a tag to create a new tab to open the url
+        setTimeout(() => {
+          tooltip.remove();
+          const a = document.createElement("a");
+          a.style.display = "none";
+          a.href = chatgpturl
+            .replace("{from}", encodeURIComponent(url))
+            .replace("{prompt}", encodeURIComponent(text));
+          a.target = "_blank";
+          a.click();
+        }, 300);
+      };
+    }, 200);
   });
 
   btn.addEventListener("dblclick", function () {
+    clearTimeout(clickTimer);
     setLanguage();
   });
 
@@ -152,4 +157,4 @@ export function gotoTesting() {
   }
 }
 
-gotoTesting()
+gotoTesting();
