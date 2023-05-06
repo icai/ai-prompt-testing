@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chatgpt + testing</title>
+  <style>
+    :root {
+      font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+      line-height: 1.5;
+      font-weight: 400;
+
+      color-scheme: light dark;
+      color: rgba(255, 255, 255, 0.87);
+      background-color: #242424;
+
+      font-synthesis: none;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      margin: 0;
+      display: flex;
+      place-items: center;
+      min-width: 320px;
+      min-height: 100vh;
+      flex-direction: column;
+    }
+
+    @media (prefers-color-scheme: light) {
+      :root {
+        color: #213547;
+        background-color: #ffffff;
+      }
+    }
+
+    #app {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .logo {
+      height: 6em;
+      padding: 1.5em;
+      will-change: filter;
+      transition: filter 300ms ease 0s;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <div>
+      <a href="https://chat.openai.com" target="_blank">
+        <img src="/src/chatgpt.svg" class="logo" alt="chatgpt logo">
+      </a>
+      <h1>Hello Chatgpt!</h1>
+    </div>
+  </div>
+  <div id="readme">
+    <div id="preview-contents"
+      style="padding-left: 35px; padding-right: 35px; padding-bottom: 331px; height: 747px; position: relative;"
+      class="mce-content-body mce-edit-focus">
+      <div></div>
+      <div>
+        <h1 id="ai-prompt-testing">AI-prompt-testing</h1>
+        <p>chatgpt button for website to generate testing</p>
+      </div>
+      <div>
+        <h2 id="configure">Configure</h2>
+        <p>Add chatbtn code manually</p>
+        <p>Below is the chatbtn code for this account. Please copy and paste this code into the code of every page on
+          your site, immediately after the or element. Only one chatbtn tag can be added per page.</p>
+      </div>
+      <div>
+        <pre class="prettyprint"><code class="language-js hljs ">
+        &lt;script async src=<span class="hljs-string">"https://unpkg.com/ai-prompt-testing@1.0.0/lib/chatgpt.umd.js?id=aHR0cHM6Ly9kb2NzLnczY3ViLmNvbQ=="</span>&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="javascript">
+          window._chatData = window._chatData || [];
+          <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">chatag</span><span class="hljs-params">()</span>{</span>_chatData.push(<span class="hljs-built_in">arguments</span>);}
+          chatag(<span class="hljs-string">'js'</span>, <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>());
+          chatag(<span class="hljs-string">'config'</span>, <span class="hljs-string">'aHR0cHM6Ly9kb2NzLnczY3ViLmNvbQ=='</span>);
+        </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+        </span></code></pre>
+      </div>
+      <div>
+        <h3 id="chatag-config">chatag config</h3>
+        <ul>
+          <li>
+            <p>chatag(‘config’, ‘aHR0cHM6Ly9kb2NzLnczY3ViLmNvbQ==’);</p>
+            <p>‘aHR0cHM6Ly9kb2NzLnczY3ViLmNvbQ==’ equal to btoa(location.origin)</p>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h2 id="license">LICENSE</h2>
+        <p>Copyright (c) Terry Cai. Licensed under the MIT license.</p>
+      </div>
+    </div>
+
+  </div>
+  <script type="module" src="/src/index.js"></script>
+  <script>
+    window._chatData = window._chatData || [];
+    function chatag() { _chatData.push(arguments); }
+    chatag('js', new Date());
+    chatag('config', 'aHR0cDovL2xvY2FsaG9zdDo1MTcz');
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+{
+  "name": "ai-prompt-testing",
+  "version": "1.0.0",
+  "description": "chatgpt prompt for website testing",
+  "files": [
+    "lib"
+  ],
+  "main": "./lib/chatgpt.umd.js",
+  "module": "./lib/chatgpt.es.js",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./lib/chatgpt.es.js",
+      "require": "./lib/chatgpt.umd.js"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^4.3.2",
+    "vite-svg-loader": "^4.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/icai/ai-prompt-testing.git"
+  },
+  "keywords": [
+    "chatgpt",
+    "testing",
+    "prompt"
+  ],
+  "author": "Terry Cai",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/icai/ai-prompt-testing/issues"
+  },
+  "homepage": "https://github.com/icai/ai-prompt-testing#readme"
+}
