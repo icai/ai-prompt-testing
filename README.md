@@ -2,6 +2,21 @@
 
   chatgpt button for website to generate testing
 
+  <div align="center">
+
+[![NPM Version][npm-image]][npm-url]
+[![License][license-image]][license-url]
+
+
+
+[npm-image]: https://img.shields.io/npm/v/ai-prompt-testing.svg
+[npm-url]: https://www.npmjs.com/package/ai-prompt-testing
+[license-image]: https://img.shields.io/npm/l/ai-prompt-testing.svg
+[license-url]: https://github.com/icai/ai-prompt-testing/blob/master/LICENSE
+
+
+</div>
+
 
 
 
@@ -47,9 +62,7 @@ chatag('config', tracker_id);
 
 
 
-
-
-### chatag config
+### Chatag config
 
 -  chatag('config', 'aHR0cHM6Ly9kb2NzLnczY3ViLmNvbQ==');
   
@@ -58,6 +71,17 @@ chatag('config', tracker_id);
     
 
 
+
+### Lastest library
+
+
+https://unpkg.com/ai-prompt-testing
+
+
+## Demo 
+
+ 
+https://docs.w3cub.com/rust/std/index
 
 
 ## LICENSE

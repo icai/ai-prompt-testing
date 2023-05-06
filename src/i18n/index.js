@@ -55,6 +55,12 @@ var i18nlang = {
     copy: "Содержимое скопировано, пожалуйста, перейдите на сайт chatgpt",
     tip: "Нажмите, чтобы сгенерировать приглашение к тестированию, дважды щелкните, чтобы изменить язык",
   },
+  tr: {
+    title: "Test oluştur",
+    prompt: "Bağlantı {url} temel alınarak 4 çoktan seçmeli soru, 3 kısa cevap sorusu ve 3 doğru/yanlış sorusu içeren bir test oluşturun ve sorulardan sonra cevapları ekleyin.",
+    copy: "İçerik kopyalandı, lütfen chatgpt web sitesine gidin",
+    tip: "Testi oluşturmak için tıklayın, dil değiştirmek için çift tıklayın"
+  }
 };
 
 export default i18nlang;

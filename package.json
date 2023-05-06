@@ -23,6 +23,7 @@
   "devDependencies": {
     "release-it": "^15.10.3",
     "vite": "^4.3.2",
+    "vite-plugin-banner": "^0.7.0",
     "vite-svg-loader": "^4.0.0"
   },
   "repository": {
