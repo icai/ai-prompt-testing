@@ -17,7 +17,7 @@ Below is the chatbtn code for this account. Please copy and paste this code into
 
 ```js
 
-<script async src="https://unpkg.com/ai-prompt-testing@1.0.0/lib/chatgpt.umd.js?id=aHR0cHM6Ly9kb2NzLnczY3ViLmNvbQ=="></script>
+<script async src="https://unpkg.com/ai-prompt-testing@1.0.1/lib/chatgpt.umd.js?id=aHR0cHM6Ly9kb2NzLnczY3ViLmNvbQ=="></script>
 <script>
   window._chatData = window._chatData || [];
   function chatag(){_chatData.push(arguments);}
@@ -33,7 +33,7 @@ or
 <script>
 var tracker_id = 'aHR0cHM6Ly9kb2NzLnczY3ViLmNvbQ=='
 function chatag(){_chatData.push(arguments);}
-var url = "https://unpkg.com/ai-prompt-testing@1.0.0/lib/chatgpt.umd.js?id=" + tracker_id;
+var url = "https://unpkg.com/ai-prompt-testing@1.0.1/lib/chatgpt.umd.js?id=" + tracker_id;
 (function() {
   var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
   ga.src = url;
