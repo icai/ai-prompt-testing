@@ -21,7 +21,7 @@
     "release": "release-it"
   },
   "hooks": {
-    "after:bump": "npm run build"
+    "after:version": "npm run build"
   },
   "devDependencies": {
     "release-it": "^15.10.3",
