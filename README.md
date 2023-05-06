@@ -44,7 +44,7 @@ Below is the chatbtn code for this account. Please copy and paste this code into
 
 or 
 
-```
+```js
 <script>
 var tracker_id = 'aHR0cHM6Ly9kb2NzLnczY3ViLmNvbQ=='
 function chatag(){_chatData.push(arguments);}
