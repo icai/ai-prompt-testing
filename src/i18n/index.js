@@ -60,6 +60,18 @@ var i18nlang = {
     prompt: "Bağlantı {url} temel alınarak 4 çoktan seçmeli soru, 3 kısa cevap sorusu ve 3 doğru/yanlış sorusu içeren bir test oluşturun ve sorulardan sonra cevapları ekleyin.",
     copy: "İçerik kopyalandı, lütfen chatgpt web sitesine gidin",
     tip: "Testi oluşturmak için tıklayın, dil değiştirmek için çift tıklayın"
+  },
+  in: {
+    title: "Membuat tes",
+    prompt: "Berdasarkan tautan {url}, buat tes dengan 4 pertanyaan pilihan ganda, 3 pertanyaan jawaban singkat, dan 3 pertanyaan benar/salah, dan sertakan jawaban setelah pertanyaan.",
+    copy: "Konten disalin, silakan pergi ke situs web chatgpt",
+    tip: "Klik untuk menghasilkan tes, klik dua kali untuk mengubah bahasa"
+  },
+  ua: {
+    title: "Створити тест",
+    prompt: "На основі посилання {url} створити тест з 4 питань з вибором відповіді, 3 питаннями з короткою відповіддю та 3 питаннями із правильним/неправильним твердженням, а також включити відповіді після питань.",
+    copy: "Вміст скопійовано, будь ласка, перейдіть на сайт chatgpt",
+    tip: "Натисніть, щоб створити запрошення до тестування, двічі клацніть, щоб змінити мову"
   }
 };
 
