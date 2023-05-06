@@ -1,7 +1,13 @@
 import i18nlang from "./i18n";
 import chatgptsvg from "./chatgpt.svg?raw";
 
+var __chatinit = false;
+
 function createBtn(opt) {
+  if (__chatinit) {
+    return;
+  }
+  __chatinit = true;
   var chatgpturl = "https://chat.openai.com/?prompt={prompt}&form={form}";
   var browserLang = navigator.language.substr(0, 2);
   var switchlang = "";
@@ -134,7 +140,16 @@ function serialize(data) {
   return option;
 }
 
-window.onload = function () {
-  const option = serialize(window._chatData);
-  createBtn(option);
-};
+export function gotoTesting() {
+  window.onload = function () {
+    const option = serialize(window._chatData);
+    createBtn(option);
+  };
+  // if the page is loaded
+  if (document.readyState === "complete") {
+    const option = serialize(window._chatData);
+    createBtn(option);
+  }
+}
+
+gotoTesting()

@@ -9,7 +9,7 @@
 
 
 
-Add chatbtn code manually
+### Add chatbtn code manually
 
 
 Below is the chatbtn code for this account. Please copy and paste this code into the code of every page on your site, immediately after the <head> or <body> element. Only one chatbtn tag can be added per page.
@@ -26,6 +26,27 @@ Below is the chatbtn code for this account. Please copy and paste this code into
 </script>
 
 ```
+
+or 
+
+```
+<script>
+var tracker_id = 'aHR0cHM6Ly9kb2NzLnczY3ViLmNvbQ=='
+function chatag(){_chatData.push(arguments);}
+var url = "https://unpkg.com/ai-prompt-testing@1.0.0/lib/chatgpt.umd.js?id=" + tracker_id;
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = url;
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+window._chatData = window._chatData || [];
+chatag('js', new Date());
+chatag('config', tracker_id);
+</script>
+```
+
+
+
 
 
 ### chatag config
