@@ -84,6 +84,13 @@ https://unpkg.com/ai-prompt-testing
 https://docs.w3cub.com/rust/std/index
 
 
+## Greasy Gork script
+
+
+https://greasyfork.org/en/scripts/484320-chatgpt-for-website-qa-testing
+
+
+
 ## LICENSE
 
 Copyright (c) Terry Cai. Licensed under the MIT license.
